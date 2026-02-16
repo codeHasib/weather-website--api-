@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/fav-icon.webp" type="image/x-icon">
+
+    <!-- Tailwind Connect Using CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- CSS Connect -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Google Fonts Connect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Connect -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Weather Finder | CoDeHaSiB</title>
+  </head>
+  <body class="cold">
+    <header class="py-6 px-10 text-center border-b-2">
+      <h2 class="text-3xl font-extrabold">CoDeHaSiB</h2>
+    </header>
+
+    <!-- Search Location Section -->
+    <section class="container mx-auto p-5">
+      <div
+        class="flex flex-col justify-center md:justify-between lg:justify-between items-center flex-wrap gap-6"
+      >
+        <h2 class="text-xl space-x-2">
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <span id="location-name-city">Bangladesh,</span>
+          <span id="location-name-country">Bangladesh.</span>
+        </h2>
+        <div class="flex gap-4 justify-center items-center flex-wrap">
+          <div class="bg-white py-2 px-4 rounded-4xl outline-black outline-1">
+            <input
+              style="color: black"
+              placeholder="Search"
+              type="text"
+              id="searchInputEl"
+              class="bg-white w-[85%] outline-none"
+            />
+            <i style="color: black" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <button
+            id="searchBtn"
+            class="py-2 px-6 bg-gray-700 rounded-4xl font-bold"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Display -->
+    <section class="container mx-auto p-5">
+      <div id="weather-display"></div>
+
+      <div id="other-display">
+      </div>
+    </section>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

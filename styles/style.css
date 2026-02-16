@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* Default Styles */
+* {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+input {
+  background-color: white;
+}
+/* Warm Design */
+.warm {
+  animation: bg-color-warm 0.2s ease forwards;
+}
+/* Cold Design */
+.cold {
+  animation: bg-color-cold 0.2s ease forwards;
+}
+/* Weather Display Section */
+#weather-display h2 {
+  font-size: 26px;
+  font-weight: lighter;
+  text-align: center;
+}
+#weather-display div {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+#weather-display div img {
+  height: 80%;
+}
+#weather-display div h2 {
+  text-align: center;
+  /* margin-top: 16px; */
+  font-size: 45px;
+  font-weight: lighter;
+}
+/* Weather Display Other Info */
+#other-display div {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.709);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background-color: rgba(255, 255, 255, 0.157);
+  margin-top: 50px;
+}
+#other-display div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+#other-display div div h2 {
+  font-size: 14px;
+  font-weight: bolder;
+}
+@media screen and (min-width: 576px) {
+  #other-display div div h2 {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+}
+#other-display div:nth-child(1) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.186);
+  border-right: 1px solid rgba(255, 255, 255, 0.186);
+}
+#other-display div:nth-child(2) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.186);
+}
+#other-display div:nth-child(3) {
+  border-right: 1px solid rgba(255, 255, 255, 0.186);
+}
+/* Animations */
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.show {
+  animation: scale 0.3s linear forwards;
+}
+@keyframes bg-color-warm {
+  from {
+    background: linear-gradient(
+      90deg,
+      rgba(46, 93, 136, 1) 0%,
+      rgba(40, 108, 154, 1) 50%,
+      rgba(48, 87, 129, 1) 100%
+    );
+  }
+  to {
+    background: linear-gradient(
+      90deg,
+      rgba(41, 151, 146, 1) 0%,
+      rgba(45, 141, 138, 1) 50%,
+      rgba(43, 109, 107, 1) 100%
+    );
+  }
+}
+@keyframes bg-color-cold {
+  from {
+    background: linear-gradient(
+      90deg,
+      rgba(41, 151, 146, 1) 0%,
+      rgba(45, 141, 138, 1) 50%,
+      rgba(43, 109, 107, 1) 100%
+    );
+  }
+  to {
+    background: linear-gradient(
+      90deg,
+      rgba(46, 93, 136, 1) 0%,
+      rgba(40, 108, 154, 1) 50%,
+      rgba(48, 87, 129, 1) 100%
+    );
+  }
+}
