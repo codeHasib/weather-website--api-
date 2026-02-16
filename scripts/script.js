@@ -1,7 +1,7 @@
 let weatherInfo;
-const sunnyImage = `../assets/sunny.webp`;
-const rainImage = `../assets/rain.webp`;
-const snowImage = `../assets/snow.webp`;
+const sunnyImage = "../assets/sunny.webp";
+const rainImage = "../assets/rain.webp";
+const snowImage = "../assets/snow.webp";
 const apiKey = "a39f9214a2ef4cc7932162223261602";
 const locationCityDisplay = document.querySelector("#location-name-city");
 const locationCountryDisplay = document.querySelector("#location-name-country");
