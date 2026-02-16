@@ -42,11 +42,13 @@ async function getData(q) {
   }
 }
 function renderErr(error) {
+  weatherDisplayDiv.innerHTML = "";
   let h1 = document.createElement("h1");
   h1.style.textAlign = "center";
   h1.style.marginTop = "50px";
   h1.style.fontSize = "26px";
   h1.textContent = error;
+  weatherDisplayDiv.append(h1);
 }
 function renderUI(obj) {
   weatherDisplayDiv.innerHTML = "";
