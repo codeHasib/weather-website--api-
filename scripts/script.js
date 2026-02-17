@@ -20,8 +20,8 @@ async function getData(q) {
       let res = await fetch(
         `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${q}`,
       );
-      if (!res.ok) throw new Error("404 Server not found!");
       let data = await res.json();
+      if (!res.ok) throw new Error(data.error.message);
       weatherInfo = data;
       renderUI(weatherInfo);
     } catch (err) {
@@ -43,6 +43,7 @@ async function getData(q) {
 }
 function renderErr(error) {
   weatherDisplayDiv.innerHTML = "";
+  weatherOtherDisplayDiv.innerHTML = "";
   let h1 = document.createElement("h1");
   h1.style.textAlign = "center";
   h1.style.marginTop = "50px";
